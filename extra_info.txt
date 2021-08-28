@@ -1,0 +1,23 @@
+
+In Linux:
+
+sudo docker ps -aqf "name=containername"
+
+Or in OS X, Windows:
+
+docker ps -aqf "name=containername"
+
+where containername is your container name.
+
+To avoid getting false positives, as @llia Sidorenko notes, you can use regex anchors like so:
+
+docker ps -aqf "name=^containername$"
+
+explanation:
+
+    -q for quiet. output only the ID
+    -a for all. works even if your container is not running
+    -f for filter.
+    ^ container name must start with this string
+    $ container name must end with this string
+

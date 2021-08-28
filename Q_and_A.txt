@@ -1,0 +1,10 @@
+Questions and Answers searched for docker
+
+Why is my Docker container not running?
+The container has already exited. 
+The docker exec command runs a new command in a running container. 
+By default, docker container will exit immediately if you do not have any task running on the container. 
+To keep the container running in the background, try to run it with --detach (or -d ) argument.
+24-Jul-2017
+
+

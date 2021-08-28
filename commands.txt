@@ -1,0 +1,17 @@
+1. Build your docker image 
+
+    docker build -t name_of_image_to_build path_to_save_docker_image
+
+    docker build -t tdock .
+
+2. find your docker image
+    docker image ls 
+
+3. Run a docker image 
+    docker run tdock
+
+4. To find your container id use command
+    docker ps -a 
+
+5. Now run your docker in detach mode to keep it running
+    
