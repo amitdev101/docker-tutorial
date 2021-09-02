@@ -1,0 +1,19 @@
+1. sudo docker pull ubuntu
+2. docker images 
+3. copy the container_id/Image_id (fb52e22af1b0)
+4. docker run -it "container_id" bin/bash
+5. apt-get update 
+6. exit
+7. check which was your container. Run "docker ps -a" and copy its container_id
+8. docker commit "container_id" "new_image_name"
+9. now find your docker images and copy the container_id
+10. run this with same command as 4.
+
+
+### Turning on DISPLAY for pyautogui ###
+1. apt install -y xvfb xserver-xephyr
+2. Xvfb :99 -ac &
+3. export DISPLAY=:99
+4. pip install python-xlib
+5. apt-get install python3-tk python3-dev
+
