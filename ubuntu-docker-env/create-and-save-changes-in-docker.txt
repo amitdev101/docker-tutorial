@@ -17,3 +17,8 @@
 4. pip install python-xlib
 5. apt-get install python3-tk python3-dev
 
+### RUNNING GUI ###
+1. docker run -it -p 2222:22  Image_Name bin/bash
+1. docker run -it --env="DISPLAY" --net=host amit-pag-3 bin/bash
+sudo apt install openssh-server
+sudo systemctl status ssh
