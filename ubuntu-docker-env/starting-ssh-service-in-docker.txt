@@ -1,0 +1,29 @@
+https://stackoverflow.com/questions/28134239/how-to-ssh-into-docker
+
+
+It is a short way but not permanent
+
+first create a container
+
+docker run  ..... -p 22022:2222 .....
+
+port 22022 on your host machine will map on 2222, we change the ssh port on container later , then on your container executing the following commands
+
+apt update && apt install  openssh-server # install ssh server
+passwd #change root password
+
+in file /etc/ssh/sshd_config change these : uncomment Port and change it to 2222
+
+Port 2222
+
+uncomment PermitRootLogin to PermitRootLogin yes
+
+and finally restart ssh server
+
+/etc/init.d/ssh start
+
+you can login to your container now
+
+ssh -p 2022 root@HostIP
+
+Remember : if you restart the container you need to restart ssh server again
